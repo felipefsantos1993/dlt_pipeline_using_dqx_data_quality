@@ -9,21 +9,21 @@ O Databricks DQX é uma funcionalidade projetada para realizar o gerenciamento d
 ## Objetivos
 1. Definir Regras de Qualidade de Dados (Expectations):
 - Permite definir regras declarativas para validar os dados, como por exemplo:
- - Valores não nulos (expect(col("id").isNotNull(), "ID must not be null"))
- - Faixas válidas (expect(col("age") > 0, "Age must be positive"))
- - Conformidade com formatos ou padrões específicos
+- Valores não nulos (expect(col("id").isNotNull(), "ID must not be null"))
+- Faixas válidas (expect(col("age") > 0, "Age must be positive"))
+- Conformidade com formatos ou padrões específicos
 
 2. Monitorar Conformidade com as Regras:
-Avalia automaticamente se os dados cumprem as regras definidas e gera métricas sobre:
+- Avalia automaticamente se os dados cumprem as regras definidas e gera métricas sobre:
 - Porcentagem de linhas válidas
- - Quantidade de falhas por expectativa
- - Tendências ao longo do tempo
+- Quantidade de falhas por expectativa
+- Tendências ao longo do tempo
 
 3. Tratar Linhas Inválidas com Ações Customizadas:
 - Permite configurar o que fazer com os dados inválidos:
- - fail: interrompe o pipeline se houver falhas
- - drop: descarta linhas que violam a regra
- - quarantine: envia para uma tabela separada para análise posterior
+- fail: interrompe o pipeline se houver falhas
+- drop: descarta linhas que violam a regra
+- quarantine: envia para uma tabela separada para análise posterior
 
 4. Aumentar a Confiabilidade do Pipeline de Dados:
 - Ao aplicar regras de qualidade automaticamente durante o processamento, o DQX ajuda a evitar que dados corrompidos ou incompletos contaminem os resultados finais.
