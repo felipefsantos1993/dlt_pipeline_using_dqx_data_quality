@@ -33,13 +33,26 @@ O Databricks DQX é uma funcionalidade projetada para realizar o gerenciamento d
 #
 6. Facilidade de Implementação (Code-first ou UI):
 - O DQX pode ser configurado tanto via código em Python com DLT quanto visualmente pela interface do Databricks.
+## Tecnologias
+- DQX
+## Arquitetura
+- Governança de dados: Centraliza controle de qualidade e rastreabilidade
+- Observabilidade: Métricas e logs sobre conformidade com DQX
+- Flexibilidade: Fácil adaptação a novas regras sem reescrever o pipeline inteiro
+- Escalabilidade: Ideal para cenários de dados em larga escala com DLT autogerenciado
 
 
 
-
-
+## Documentações Utilizadas
+Link
 #
-### Project Description:
-###### The decision-making process is directly linked to the quality of the data provided for the different types of analysis. The use of incomplete, inconsistent or simply incorrect data can cause major losses for companies and create compromising scenarios for the business.
-###### Databricks DQX can help us overcome this problem in pipelines created in the tool itself, through automatic validation rules and personalized monitoring for all data layers.
-###### Databricks DQX is a functionality designed to manage data quality through Data Frames and Streams validation rules through the use of Apache Spark, allowing us to obtain quality indicators such as Integrity, Completeness and Consistency, which, in turn, are very important to ensure success in the decision-making process using large volumes of data.
+#
+#
+# dqx_data_quality_framework-databricks
+
+![alt text](cover.png)
+
+## Overview
+The decision-making process is directly linked to the quality of the data provided for the different types of analysis. The use of incomplete, inconsistent or simply incorrect data can cause major losses for companies and create compromising scenarios for the business.
+Databricks DQX can help us overcome this problem in pipelines created in the tool itself, through automatic validation rules and personalized monitoring for all data layers.
+Databricks DQX is a functionality designed to manage data quality through Data Frames and Streams validation rules through the use of Apache Spark, allowing us to obtain quality indicators such as Integrity, Completeness and Consistency, which, in turn, are very important to ensure success in the decision-making process using large volumes of data.
