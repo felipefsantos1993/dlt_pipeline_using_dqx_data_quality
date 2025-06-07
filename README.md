@@ -41,7 +41,7 @@ O Databricks DQX é uma funcionalidade projetada para realizar o gerenciamento d
 - Flexibilidade: Fácil adaptação a novas regras sem reescrever o pipeline inteiro
 - Escalabilidade: Ideal para cenários de dados em larga escala com DLT autogerenciado
 
-
+![alt text](architecture.png)
 
 ## Documentações Utilizadas
 Link
