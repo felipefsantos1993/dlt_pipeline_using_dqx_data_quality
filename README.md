@@ -26,12 +26,6 @@ Este projeto demonstra um pipeline com Delta Live Tables (DLT) utilizando DQX (D
 - `order_id` não pode ser nulo
 - `total_amount` deve ser ≥ 0 (linhas inválidas são descartadas)
 - `order_date` não pode ser nulo
-| Expectation          | Regra SQL                | Ação     |
-| -------------------- | ------------------------ | -------- |
-| `valid_order_id`     | `order_id IS NOT NULL`   | Aviso    |
-| `valid_total_amount` | `total_amount >= 0`      | **DROP** |
-| `valid_order_date`   | `order_date IS NOT NULL` | Aviso    |
-
 #
 ![alt text](architecture.png)
 
