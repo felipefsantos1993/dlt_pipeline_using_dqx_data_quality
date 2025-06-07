@@ -1,4 +1,4 @@
-# dqx_data_quality_framework-databricks
+# Título
 
 ![alt text](cover.png)
 
@@ -27,14 +27,14 @@ Este projeto demonstra um pipeline com Delta Live Tables (DLT) utilizando DQX (D
 - `total_amount` deve ser ≥ 0 (linhas inválidas são descartadas)
 - `order_date` não pode ser nulo
 #
-![alt text](architecture.png)
+![alt text](image.png)
 
 ## Documentações Utilizadas
 Link
 #
 #
 #
-# dqx_data_quality_framework-databricks
+# Title
 
 ![alt text](cover.png)
 
