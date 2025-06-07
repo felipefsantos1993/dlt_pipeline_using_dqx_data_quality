@@ -7,40 +7,32 @@ O processo de tomada de decisão está diretamente ligado à qualidade dos dados
 O Databricks DQX pode nos ajudar a superar esse problema em pipelines criados na própria ferramenta, através de regras de validação automáticas e monitoramento personalizado para todas as camadas de dados.
 O Databricks DQX é uma funcionalidade projetada para realizar o gerenciamento de qualidade dos dados por meio de regras de validação de Data Frames e Streams através do uso do Apache Spark, nos permitindo obter indicadores de qualidade como Integridade, Completude e Consistêcia, que, por sua vez, são muito importantes para garantirmos o sucesso no processo de tomada de decisão utilizando grandes volumes de dados.
 ## Objetivos
-1. Definir Regras de Qualidade de Dados (Expectations):
-- Permite definir regras declarativas para validar os dados, como por exemplo:
-- Valores não nulos (expect(col("id").isNotNull(), "ID must not be null"))
-- Faixas válidas (expect(col("age") > 0, "Age must be positive"))
-- Conformidade com formatos ou padrões específicos
-#
-2. Monitorar Conformidade com as Regras:
-- Avalia automaticamente se os dados cumprem as regras definidas e gera métricas sobre:
-- Porcentagem de linhas válidas
-- Quantidade de falhas por expectativa
-- Tendências ao longo do tempo
-#
-3. Tratar Linhas Inválidas com Ações Customizadas:
-- Permite configurar o que fazer com os dados inválidos:
-- fail: interrompe o pipeline se houver falhas
-- drop: descarta linhas que violam a regra
-- quarantine: envia para uma tabela separada para análise posterior
-#
-4. Aumentar a Confiabilidade do Pipeline de Dados:
-- Ao aplicar regras de qualidade automaticamente durante o processamento, o DQX ajuda a evitar que dados corrompidos ou incompletos contaminem os resultados finais.
-#
-5. Auditoria e Transparência:
-- As expectativas aplicadas são registradas nos event logs e podem ser auditadas. Isso aumenta a rastreabilidade do pipeline.
-#
-6. Facilidade de Implementação (Code-first ou UI):
-- O DQX pode ser configurado tanto via código em Python com DLT quanto visualmente pela interface do Databricks.
+Construir um pipeline de dados com Delta Live Tables que:
+- Lê dados brutos de uma fonte (bronze)
+- Realiza transformações (silver)
+- Aplica regras de qualidade de dados com DQX
+- Cria uma tabela final (gold) pronta para análise
 ## Tecnologias
-- DQX
+- Delta Live Tables (DLT) e Data Quality Expectations (DQX)
 ## Arquitetura
-- Governança de dados: Centraliza controle de qualidade e rastreabilidade
-- Observabilidade: Métricas e logs sobre conformidade com DQX
-- Flexibilidade: Fácil adaptação a novas regras sem reescrever o pipeline inteiro
-- Escalabilidade: Ideal para cenários de dados em larga escala com DLT autogerenciado
+Este projeto demonstra um pipeline com Delta Live Tables (DLT) utilizando DQX (Data Quality Expectations) para garantir integridade dos dados.
+#
+1. Camadas
+- **Bronze**: ingestão dos dados brutos
+- **Silver**: limpeza e validação com DQX
+- **Gold**: agregações e métricas
+#
+2. Qualidade dos Dados
+- `order_id` não pode ser nulo
+- `total_amount` deve ser ≥ 0 (linhas inválidas são descartadas)
+- `order_date` não pode ser nulo
+| Expectation          | Regra SQL                | Ação     |
+| -------------------- | ------------------------ | -------- |
+| `valid_order_id`     | `order_id IS NOT NULL`   | Aviso    |
+| `valid_total_amount` | `total_amount >= 0`      | **DROP** |
+| `valid_order_date`   | `order_date IS NOT NULL` | Aviso    |
 
+#
 ![alt text](architecture.png)
 
 ## Documentações Utilizadas
