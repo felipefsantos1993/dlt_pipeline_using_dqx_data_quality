@@ -27,7 +27,7 @@ Este projeto demonstra um pipeline com Delta Live Tables (DLT) utilizando DQX (D
 - `total_amount` deve ser ≥ 0 (linhas inválidas são descartadas)
 - `order_date` não pode ser nulo
 #
-![alt text](image.png)
+![alt text](architecture.png)
 
 ## Documentações Utilizadas
 Link
