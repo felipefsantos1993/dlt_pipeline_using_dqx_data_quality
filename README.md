@@ -36,7 +36,7 @@ Link
 #
 # Title
 
-![alt text](cover.png)
+![alt text](cover-1.png)
 
 ## Overview
 The decision-making process is directly linked to the quality of the data provided for the different types of analysis. The use of incomplete, inconsistent or simply incorrect data can cause major losses for companies and create compromising scenarios for the business.
