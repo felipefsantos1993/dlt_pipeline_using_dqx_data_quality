@@ -1,5 +1,3 @@
-# Título
-
 ![alt text](cover.png)
 
 ## Visão Geral
@@ -34,8 +32,6 @@ Link
 #
 #
 #
-# Title
-
 ![alt text](cover.png)
 
 ## Overview
